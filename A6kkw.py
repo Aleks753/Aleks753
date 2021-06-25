@@ -17,7 +17,7 @@ class deepaiMod(loader.Module):
         self._db = db
 
     async def dai_set_tokencmd(self, m):
-        self._db.set("deepai", "token", str(m.raw_text.split("ea506c85-905f-42e9-9533-ff22c55696b3", 1)[1]))
+        self._db.set("deepai", "token", str(m.raw_text.split(" ", 1)[1]))
         await m.edit("[DeepAI] Токен установлен")
 
     async def cnsfwcmd(self, m):
